@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <br />
 
 <img src="https://raw.githubusercontent.com/mxstbr/react-boilerplate-brand/master/assets/banner-metal.jpg" alt="react boilerplate banner" align="center" />
@@ -90,3 +91,7 @@ Then start building your app!
 ## License
 
 This project is licensed under the MIT license, Copyright (c) 2015 Maximilian Stoiber. For more information see `LICENSE.md`.
+=======
+# react-bootstrap-modal-test
+a test to show a problem with react-boostrap-modal
+>>>>>>> 7e4f5c59ef90960c1f89cc75268f56b5b338a03b
