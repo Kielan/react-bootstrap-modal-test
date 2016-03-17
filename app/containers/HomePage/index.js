@@ -8,34 +8,40 @@ import {
 } from '../App/actions'
 
 import showModalSelector from 'showModalSelector';
+import ModalContainer from 'modalContainer';
 
 class HomePage extends React.Component {
-  constructor() {
-      super();
-  }
+    constructor() {
+	super();
+    }
+
+    close() {
+	
+    }
+    
     render() {
 	return (
-	    <Row className="show-grid">
+		<Row className="show-grid">
 	    	<Col md={6}>
 		<button onClick={this.props._onShowModalAction}>
 		<label>clicking this button should show Modal</label>
 		</button>
 		</Col>
-				<ModalContainer showToggle={this.props.showMdal}/>
+		<ModalContainer showToggle={this.props.showModal} close={this.close} />
 
-                </Row>
+            </Row>
 	)
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-	_onShowModalAction: () => dispatch(showModal()),
+	_onShowModalAction: () => dispatch(showModalAction()),
 	dispatch
     }
 }
 
 export default connect(createSelector(
     showModalSelector,
-    (showModal) => (showModal)
+    (showModal) => ({showModal})
 ), mapDispatchToProps)(HomePage);
